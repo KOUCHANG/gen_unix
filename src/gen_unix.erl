@@ -33,8 +33,8 @@
          terminate/2, code_change/3]).
 
 -record(state, {
-        poll,
-        fds = dict:new()
+        poll :: inert_drv:ref(),
+        fds = dict:new() :: dict:array()
     }).
 
 start() ->
